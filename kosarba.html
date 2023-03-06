@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kosár</title>
+</head>
+
+<body>
+    <div class="kosarba">
+        KENYÉR
+        <input type="button" name="k" value="-" onclick="kenyer_db.value = Number(kenyer_db.value) - 1">
+        <input type="text" name="k" id="kenyer_db" value="1">
+        <input type="button" name="k" value="+" onclick="kenyer_db.value = Number(kenyer_db.value) + 1">
+        <input type="submit" value="KOSÁRBA" onclick="ad('kenyer', db.value)">
+        <br><br><br>
+        LEKVÁR
+        <input type="button" name="l" value="-" onclick="lekvar_db.value = Number(lekvar_db.value) - 1">
+        <input type="text" name="l" id="lekvar_db" value="1">
+        <input type="button" name="l" value="+" onclick="lekvar_db.value = Number(lekvar_db.value) + 1">
+        <input type="submit" value="KOSÁRBA" onclick="ad('lekvar', db.value)">
+    </div>
+</body>
+<script>
+    var _kenyer = 500
+    var _lekvar = 100
+
+    function ad(nev,ertek) {
+        localStorage.setItem(nev,Number(ertek));
+        document.getElementById('kenyer_ar').value
+    }
+</script>
+</html>
